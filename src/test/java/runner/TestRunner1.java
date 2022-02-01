@@ -11,10 +11,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/features", glue = "stepDef", plugin = { "pretty",
 		"html:target/cucumber-reports.html", "json:target/cucumber.json",
-		}, tags = "@Demo")
+		}, tags = "@swaglab")
 
 public class TestRunner1 {
-	@AfterClass
 	public static void sendEmail() {
 
 		System.out.println("Send Email of execution");
