@@ -13,9 +13,6 @@ public class OrderConfirmationPageStepDefination extends Setup {
 	public void the_order_shuld_be_successfully_completed() {
 		String Actualmsg = OrderConfirmationPg.readConfirmationmsg();
 		String Expectedmsg = "CHECKOUT: COMPLETE!";
-//		if (Actualmsg == Expectedmsg) {
-//			System.out.println("Order Placed Sucessfully");
-//		}
 		assertTrue(OrderConfirmationPg.readConfirmationmsg().equals(Expectedmsg));
 
 	}

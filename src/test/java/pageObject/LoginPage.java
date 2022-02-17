@@ -13,7 +13,7 @@ public class LoginPage extends Setup {
 	
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		//Setup.driver = driver;
+		
 	}
 	@FindBy(name = "user-name")
 	public WebElement username;

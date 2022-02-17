@@ -11,7 +11,7 @@ public class SwagLabHomePage extends Setup {
 	
 	public SwagLabHomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		//Setup.driver = driver;
+		
 	}
 	
 	//add to cart locaters

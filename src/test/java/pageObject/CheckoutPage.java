@@ -11,7 +11,7 @@ public class CheckoutPage extends Setup {
 	
 	public CheckoutPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		//Setup.driver = driver;
+		
 	}
 	
 

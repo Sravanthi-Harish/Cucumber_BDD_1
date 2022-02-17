@@ -11,7 +11,7 @@ public class OrderConfirmationpage extends Setup{
 	
 	public OrderConfirmationpage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		//Setup.driver = driver;
+		
 	}
 	
 	@FindBy(xpath = "//span[@class = 'title']")

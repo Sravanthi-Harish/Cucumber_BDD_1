@@ -9,7 +9,7 @@ public class Cartpage {
 	
 	public Cartpage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		//Setup.driver = driver;
+		
 	}
 	
 

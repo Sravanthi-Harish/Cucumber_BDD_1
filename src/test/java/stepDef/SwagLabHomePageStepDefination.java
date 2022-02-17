@@ -24,7 +24,6 @@ public class SwagLabHomePageStepDefination extends Setup {
 	SwagLabHomePage Swaglab = new SwagLabHomePage(driver);
 
 	@When("I add following products to cart")
-//	public void i_add_following_products_to_cart(io.cucumber.datatable.DataTable dataTable) {
 	public void i_add_following_products_to_cart(DataTable dataTable) {
 		List<String> productName = dataTable.asList(String.class);
 
@@ -122,8 +121,6 @@ public class SwagLabHomePageStepDefination extends Setup {
 		}
 		
 		Collections.sort(productPrice);
-
-		Assert.assertEquals(LowestPrice, productPrice.get(0));
 
 	}
 
