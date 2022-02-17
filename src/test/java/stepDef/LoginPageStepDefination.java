@@ -11,8 +11,8 @@ public class LoginPageStepDefination extends Setup {
 	
 	LoginPage LoginPg = new LoginPage(driver);
 	
-	@Given("I login Swaglabs with below user")
-	public void i_login_swaglabs_with_below_user(DataTable dataTable) {
+	@Given("user is on saucedemo homepage")
+	public void user_is_on_saucedemo_homepage(DataTable dataTable) {
 		Map<String, String> userDetails = dataTable.asMap(String.class, String.class);
 		LoginPg.login_user(userDetails);
 		

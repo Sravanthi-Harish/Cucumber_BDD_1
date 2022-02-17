@@ -23,8 +23,8 @@ public class SwagLabHomePageStepDefination extends Setup {
 
 	SwagLabHomePage Swaglab = new SwagLabHomePage(driver);
 
-	@When("I add following products to cart")
-	public void i_add_following_products_to_cart(DataTable dataTable) {
+	@When("user add following products to cart")
+	public void user_add_following_products_to_cart(DataTable dataTable) {
 		List<String> productName = dataTable.asList(String.class);
 
 		for (String a : productName) {
@@ -56,28 +56,28 @@ public class SwagLabHomePageStepDefination extends Setup {
 		Swaglab.clickOnaddToCart();
 	}
 
-	@When("I select product Sauce Labs Bike Light")
-	public void i_select_product_sauce_labs_bike_light() {
+	@When("user select product Sauce Labs Bike Light")
+	public void user_select_product_sauce_labs_bike_light() {
 		Swaglab.clickOn_item_sauce_labs_bike_light();
 	}
 
-	@When("I select product Sauce Labs Backpack")
-	public void i_select_product_item_sauce_labs_backpack() {
+	@When("user select product Sauce Labs Backpack")
+	public void user_select_product_item_sauce_labs_backpack() {
 		Swaglab.clickOn_item_sauce_labs_backpack();
 	}
 
-	@When("I select product Sauce Labs Bolt T-Shirt")
-	public void i_select_product_sauce_labs_bolt_t_shirt() {
+	@When("user select product Sauce Labs Bolt T-Shirt")
+	public void user_select_product_sauce_labs_bolt_t_shirt() {
 		Swaglab.clickOn_item_sauce_labs_bolt_t_shirt();
 	}
 
-	@When("I select product Sauce Labs Fleece Jacket")
-	public void i_select_product_item_sauce_labs_fleece_jacket() {
+	@When("user select product Sauce Labs Fleece Jacket")
+	public void user_select_product_item_sauce_labs_fleece_jacket() {
 		Swaglab.clickOn_item_sauce_labs_fleece_jacket();
 	}
 
-	@When("I Sort Products on Home Page From Price Low to high")
-	public void I_Sort_Products_on_Home_Page_From_Price_Low_to_high() {
+	@When("user Sort Products on Home Page From Price Low to high")
+	public void user_Sort_Products_on_Home_Page_From_Price_Low_to_high() {
 		Swaglab.sort.click();
 		Select sortItems = new Select(Swaglab.sort);
 		sortItems.selectByValue("lohi");
@@ -87,27 +87,27 @@ public class SwagLabHomePageStepDefination extends Setup {
 		element.get(0).click();
 	}
 
-	@And("I Add Lowest Price Product To Cart")
-	public void I_Add_Lowest_Price_Product_To_Cart() {
+	@And("user Add Lowest Price Product To Cart")
+	public void user_Add_Lowest_Price_Product_To_Cart() {
 		List<WebElement> element = new ArrayList<>(driver.findElements(By.xpath("//button[text()='Add to cart']")));
 		element.get(0).click();
 	}
 
-	@When("I Sort Products on Home Page From Price High to low")
-	public void I_Sort_Products_on_Home_Page_From_Price_High_to_low() {
+	@And("user sorts item low to high")
+	public void user_sorts_item_low_to_high() {
 		Swaglab.sort.click();
 		Select sortItems = new Select(Swaglab.sort);
-		sortItems.selectByValue("hilo");
+		sortItems.selectByValue("lohi");
 	}
 
-	@And("I Select Highest Price Product")
-	public void I_Select_Highest_Price_Product() {
+	@And("user Select Highest Price Product")
+	public void user_Select_Highest_Price_Product() {
 		List<WebElement> element = new ArrayList<>(driver.findElements(By.xpath("//button[text()='Add to cart']]")));
 		element.get(0).click();
 	}
 
-	@And("I validate Lowest Price Product Is On Top")
-	public void I_Validate_Lowest_Price_Product_Is_On_Top() {
+	@And("user validate Lowest Price Product Is On Top")
+	public void user_Validate_Lowest_Price_Product_Is_On_Top() {
 		List<WebElement> priceElement = new ArrayList<>(
 				driver.findElements(By.xpath("//div[@class = 'inventory_item_price']")));
 		List<Double> productPrice = new ArrayList<>();

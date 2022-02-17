@@ -11,13 +11,13 @@ public class CartStepDefination extends Setup {
 	
 	Cartpage CartPg = new Cartpage(driver);
 	
-	@When("I checkout from the cart")
-	public void i_checkout_from_the_cart() {
+	@When("user checkout from the cart")
+	public void user_checkout_from_the_cart() {
 		CartPg.clickOncheckout();
 	}
 	
-	@Then("I Remove Product")
-	public void i_remove_product() {
+	@Then("user Remove Product")
+	public void user_remove_product() {
 		CartPg.clickOnremove();
 	}
 
